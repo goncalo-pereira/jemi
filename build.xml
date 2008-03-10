@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<project name="jEMI" default="all" basedir=".">
+	<property file="build.properties" />
+	
+	<property name="src" value="SRC" />
+	<property name="build" value="BUILD" />
+	<property name="dist" value="${build}/DIST" />
+	<property name="classes" value="${build}/CLASSES" />
+
+	<target name="all" depends="jar" />
+	
+	<target name="init">
+		<tstamp />
+		<mkdir dir="${build}" />
+		<mkdir dir="${dist}" />
+		<mkdir dir="${classes}" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${src}" destdir="${classes}" debug="true" />
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar jarfile="${dist}/jemi.jar">
+			<manifest>
+				<section name="net/java/jemi">
+					<attribute name="Implementation-Title" value="jEMI"/>
+					<attribute name="Implementation-Version" value="${version.id}"/>
+					<attribute name="Implementation-Vendor" value="Gonçalo Pena Duarte Guerreiro Pereira"/>
+					<attribute name="Implementation-URL" value="https://jemi.dev.java.net/"/>
+					<attribute name="Implementation-License" value="Lesser General Public License (LGPL)"/>
+				</section>
+			</manifest>
+			<fileset dir="${classes}">
+				<exclude name="test/**"/>
+			</fileset>
+		</jar>
+	</target>
+		
+	<target name="clean_all">
+		<delete dir="${build}" />
+	</target>
+</project>
