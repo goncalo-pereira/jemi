@@ -39,11 +39,6 @@ public class Response {
 			throw new JemiException("Invalid response: response isn't long enough.");
 		}
 
-		System.out.println((int) theResponse[0]);
-		System.out.println((int) theResponse[theResponse.length - 1]);
-
-		System.out.println("lenght=" + theResponse.length);
-
 		if (theResponse[0] != STX || theResponse[theResponse.length - 1] != ETX) {
 			throw new JemiException("Invalid response: start or end bytes are invalid.");
 		}
@@ -53,11 +48,6 @@ public class Response {
 
 		String respContent = response.substring(0, response.length() - 2);
 		String respChecksum = response.substring(response.length() - 2);
-
-		System.out.println(respContent);
-		System.out.println(respChecksum);
-		
-		System.out.println(response.length());
 
 		if (!respChecksum.equals(EncodingUtil.getChecksum(respContent.toCharArray()))) {
 			throw new JemiException("Invalid response: invalid checksum " + respChecksum + ".");
