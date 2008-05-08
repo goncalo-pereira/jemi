@@ -55,8 +55,6 @@ public class SmsSender {
 	public void send(EmiMessage emiMessage) throws JemiException {
 		String msgToSend = emiMessage.getMessage();
 
-		System.out.println(msgToSend);
-
 		Socket smsc = null;
 		try {
 			smsc = new Socket();
@@ -79,8 +77,6 @@ public class SmsSender {
 			for (int i = 0; i < responseLen; i++) {
 				responseBytes[i] = aux[i];
 			}
-
-			System.out.println(new String(responseBytes));
 
 			Response response = new Response(responseBytes);
 
