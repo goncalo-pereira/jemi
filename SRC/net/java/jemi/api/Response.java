@@ -89,7 +89,7 @@ public class Response {
 			throw new JemiException("Invalid response: invalid reponse format.", e);
 		}
 
-		// stx01/00041/R/01/A/965121717:270208171547/E1etx
+		// stx01/00041/R/01/A/969999999:270208171547/E1etx
 		// stx01/00069/R/51/N/03/ This operation is restricted to Large Accounts/7Eetx
 	}
 
