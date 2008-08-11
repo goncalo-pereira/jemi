@@ -1,7 +1,7 @@
 /*
  * jEMI - Java implementation of the EMI Specification
  *
- * Copyright (c) 2008 Gonçalo Pena Duarte Guerreiro Pereira
+ * Copyright (c) 2008 Goncalo Pena Duarte Guerreiro Pereira
  *
  * This file is part of jEMI.
  *

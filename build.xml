@@ -27,7 +27,7 @@
 				<section name="net/java/jemi">
 					<attribute name="Implementation-Title" value="jEMI"/>
 					<attribute name="Implementation-Version" value="${version.id}"/>
-					<attribute name="Implementation-Vendor" value="Gonçalo Pena Duarte Guerreiro Pereira"/>
+					<attribute name="Implementation-Vendor" value="Goncalo Pena Duarte Guerreiro Pereira"/>
 					<attribute name="Implementation-URL" value="https://jemi.dev.java.net/"/>
 					<attribute name="Implementation-License" value="Lesser General Public License (LGPL)"/>
 				</section>
